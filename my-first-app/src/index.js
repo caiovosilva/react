@@ -1,7 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import Background from '../images/wallpaper.png';
+
+// class SquareClass extends React.component {
+//   // constructor(props) {
+//   //   super(props);
+//   //   this.state = {
+//   //     coord = col+row,
+//   //     square = square,
+//   //   };
+//   // }
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       // history: [{
+//       //   squares: Array(9).fill(null),
+//       // }],
+//       // xIsNext: true,
+//       // stepNumber: 0,
+//       squareCord: col,
+//     };
+//   }
+
+//   render() {
+//     return (
+//       <button className="square" onClick={props.onClick}>
+//         {props.value}
+//       </button>
+//     );
+//   }
+// }
 
 function Square(props) {
   return (
@@ -92,7 +120,7 @@ class Game extends React.Component {
 
     const moves = history.map((step, move) => {
       const desc = move ?
-        'Go to move #' + move :
+        'Go to move #' + move  :
         'Go to game start';
       return (
         <li key={move}>
@@ -102,7 +130,8 @@ class Game extends React.Component {
     });
 
     return (
-      <div className="game">
+      <div 
+      className="game">
         <div className="game-board">
           <Board
             squares={current.squares}
@@ -143,4 +172,3 @@ ReactDOM.render(
   <Game />,
   document.getElementById('root')
 );
- 
